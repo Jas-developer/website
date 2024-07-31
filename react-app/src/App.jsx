@@ -1,19 +1,13 @@
-import Button from "./Button";
-import Student from "./Student"
+
+import UserGreeting from "./UserGreeting";
 
 
 
 function App() {
   return(
-    <>
-    <Student name="Spongebob" age={23} isStudent={true} school="SHNHS"/>
-    <Student name="Patrick" age={23} isStudent={false} school="SHNHS"/>
-    <Student name="Squidward" age={23} isStudent={false} school="SHNHS"/>
-    <Student name="Sandy" age={23} isStudent={true} school="SHNHS"/>
-    <Student/>
-    {/* button */}
-    <Button/>
-    </>
+ <div>
+ <UserGreeting isLoggedIn={true} username="BroCode"/>
+ </div>
   );
 
 }
