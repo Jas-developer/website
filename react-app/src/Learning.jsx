@@ -17,6 +17,31 @@ export default function Learning() {
 
   // Destructuring an objects
 
+  const Vehicle = {
+    brand: "Ford",
+    model: "Mustang",
+    type: "Car",
+    year: 2021,
+    color: "red",
+  };
+
+  //creating a function that will handle the object array
+  const myVehicle = ({ type, color, brand, model }) => {
+    return [type, color, brand, model];
+  };
+
+  // using thee function
+  const [type, color, brand, model] = myVehicle(Vehicle);
+
+  // deeply neested object
+
+  // spread operator allow us to copy the content of an array or object
+  // example
+  const array1 = [1, 2, 3];
+  const array2 = [4, 5, 6];
+  const combinedArray = [...array1, ...array2];
+  console.log(combinedArray);
+
   return (
     <div>
       {fruits.map((fruit, index) => (
@@ -25,6 +50,10 @@ export default function Learning() {
       <h2>RESULT OF A DESTRUCTIORING A FUNCTION ARRAY</h2>
       <p>
         {add} - {subtract} - {multiply} - {divide}
+      </p>
+      <br />
+      <p>
+        {type} - {color} - {brand} - {model}
       </p>
     </div>
   );
