@@ -4,6 +4,7 @@ export default function Learning() {
   // learning destructioring in react/js
 
   const calculate = (a, b) => {
+    // this is a function array
     const add = a + b;
     const subtract = a - b;
     const multiply = a * b;
@@ -14,11 +15,17 @@ export default function Learning() {
 
   const [add, subtract, multiply, divide] = calculate(2, 3);
 
+  // Destructuring an objects
+
   return (
     <div>
       {fruits.map((fruit, index) => (
         <p key={index}>{fruit.name}</p>
       ))}
+      <h2>RESULT OF A DESTRUCTIORING A FUNCTION ARRAY</h2>
+      <p>
+        {add} - {subtract} - {multiply} - {divide}
+      </p>
     </div>
   );
 }

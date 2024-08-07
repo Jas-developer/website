@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>Hi. I am working as a {work("Software Engineer!").toString()}</h1>
+      <h1>Hi. I am working as a {work("!").toString()}</h1>
       <h2>This is the fruits {<Learning />}</h2>
     </>
   );
