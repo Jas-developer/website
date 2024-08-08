@@ -57,6 +57,17 @@ export default function Learning() {
 
   console.log({ ...V, ...U }); // if it is object you need to encapsulate it with an object as welll
 
+  // ternary operation
+
+  const emails = ["sample1@gmail.com", "sample2@gmail.com"];
+
+  const logIn = (email, password) => {
+    const verification = emails.some((mail) => (email == mail ? true : false));
+    return verification;
+  };
+
+  console.log(logIn("sample1@gmail.com"));
+
   return (
     <div>
       {fruits.map((fruit, index) => (
