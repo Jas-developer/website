@@ -55,6 +55,8 @@ export default function Learning() {
     color: "Yellow",
   };
 
+  console.log({ ...V, ...U }); // if it is object you need to encapsulate it with an object as welll
+
   return (
     <div>
       {fruits.map((fruit, index) => (
