@@ -42,6 +42,19 @@ export default function Learning() {
   const combinedArray = [...array1, ...array2];
   console.log(combinedArray);
 
+  // copying the content of an array
+  const V = {
+    brand: "Ford",
+    model: "Mustang",
+    color: "Red",
+  };
+
+  const U = {
+    type: "car",
+    year: 2021,
+    color: "Yellow",
+  };
+
   return (
     <div>
       {fruits.map((fruit, index) => (
