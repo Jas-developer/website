@@ -65,6 +65,7 @@ export default function Learning() {
     const verification = emails.some((mail) => (email == mail ? true : false));
     return verification;
   };
+  // creating class components
 
   console.log(logIn("sample1@gmail.com"));
 
@@ -82,5 +83,24 @@ export default function Learning() {
         {type} - {color} - {brand} - {model}
       </p>
     </div>
+  );
+}
+
+//Learning props in react
+
+function ParentComponent(props) {
+  return (
+    <>
+      <h2>{props.header}</h2>
+    </>
+  );
+}
+
+// This is the second child compopents
+function ChildComponent() {
+  return (
+    <>
+      <ParentComponent header="This is the header from child component" />
+    </>
   );
 }
