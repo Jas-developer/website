@@ -17,3 +17,5 @@ function FootballArg() {
 
   return <button onClick={() => shoot("Goal!")}>Take the shot</button>;
 }
+
+// done with click events
