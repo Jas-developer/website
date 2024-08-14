@@ -1,7 +1,14 @@
 import { useState } from "react";
 
 function MyForm() {
-  const [name, setName] = useState(""); // this will recieve  a string value
+  const [name, setName] = useState({}); // this will recieve  a string value
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+
+    setName((values) => ({ ...values, [name]: value }));
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
