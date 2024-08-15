@@ -23,8 +23,18 @@ function MyForm() {
         Enter your name:
         <input
           type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          name="username"
+          value={name.username || ""}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        Enter your age:
+        <input
+          type="text"
+          name="username"
+          value={name.age || ""}
+          onChange={handleChange}
         />
       </label>
       <input type="submit" />
