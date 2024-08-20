@@ -1,15 +1,9 @@
-import FormInput from "./components/FormInput";
-import "././App.css";
+import FormInput from "./Hooks/UseState";
 
 function App() {
   return (
     <div className="app">
-      <form>
-        <FormInput placeholder="Username" />
-        <FormInput placeholder="Email" />
-        <FormInput placeholder="Full Name" />
-        <FormInput placeholder="Sth Else" />
-      </form>
+      <FormInput />
     </div>
   );
 }
