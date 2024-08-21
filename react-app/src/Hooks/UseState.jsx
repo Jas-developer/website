@@ -1,6 +1,6 @@
 import { useState } from "react";
-
 import { memo } from "react";
+import { useEffect } from "react";
 
 function FormInput() {
   const [name, setName] = useState({
@@ -26,6 +26,10 @@ function FormInput() {
 
     console.log([...names, name]);
   };
+
+  useEffect(() => {
+    alert("New name added!");
+  }, [names]);
 
   return (
     <section>
