@@ -1,9 +1,7 @@
-import FormInput from "./Hooks/UseState";
-
 function App() {
   return (
     <div className="app">
-      <FormInput />
+      <h1>Hello World!</h1>
     </div>
   );
 }
