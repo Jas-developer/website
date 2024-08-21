@@ -19,10 +19,12 @@ function FormInput() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setNames((pname) => [...pname, { name }]);
+
+    setNames((prevNames) => [...prevNames, name]);
+
     setName({ firstName: "", lastName: "" });
-    console.log(names);
-    alert("hdsjhasd");
+
+    console.log([...names, name]);
   };
 
   return (
