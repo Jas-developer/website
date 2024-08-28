@@ -1,31 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import UserContext from "../context/UserContext";
 
 function Login() {
-  const [userName, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const { user, users, setUser, setUsers } = useContext(UserContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setUsers((e) => users.push(...e, user));
   };
   return (
     <div>
-      <h2>Login</h2>
-      <input
-        type="text"
-        name="Username"
-        value={userName}
-        onChange={(e) => setUsername(e.target.value)}
-        placeholder="Username"
-      />
-      {/*  */}
-      <input
-        type="password"
-        name="Password"
-        value={password}
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleSubmit}>Submit</button>
+      <form onSubmit={handleSubmit}>
+        <h2>Login</h2>
+        <input
+          type="text"
+          name="name"
+          value={user}
+          onChange={(e) => setUser(e.target.value)}
+          placeholder="Username"
+        />
+        {/*  */}
+        <input
+          type="number"
+          name="age"
+          value={user}
+          placeholder="Age"
+          onChange={(e) => setUser(e.target.value)}
+        />
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 }

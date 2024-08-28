@@ -1,9 +1,13 @@
 import React from "react";
 
-function Profile(props) {
+import { useContext } from "react";
+
+function Profile() {
+  const { user } = useContext(useContext);
+
   return (
     <div>
-      Profile: {}
+      Profile: {user}
       <h1>More components</h1>
     </div>
   );
